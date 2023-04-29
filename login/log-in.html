@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script"></script>
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- <div class="tab">
+        <button class="tablinks active" onclick="openTab(event, 'login')">Login</button>
+        <button class="tablinks" onclick="showSignUp()">Sign Up</button>
+      </div> -->
+
+      <div id="login" class="tabcontent">
+        <h2>Login</h2>
+        <form onsubmit="return validateLogin()">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username">
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password">
+
+          <input type="submit" value="Login" class="login-button">
+          <p>Don't have an account yet? <a href="#" onclick="showSignUp()" id="signup-link">Sign up here</a></p>
+        </form>
+      </div>
+      <div id="signup" class="tabcontent" style="display:none">
+        <h2>Sign Up</h2>
+        <form onsubmit="return validateSignUp()">
+          <label for="new-username">Username</label>
+          <input type="text" id="new-username" name="new-username">
+
+          <label for="new-password">Password</label>
+          <input type="password" id="new-password" name="new-password">
+
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password">
+
+          <input type="submit" value="Sign Up" class="login-button">
+          <p>Already have an accoount! <a href="#" onclick="openTab(event, 'login')" id="signup-link">Log in here</a></p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
